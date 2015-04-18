@@ -153,7 +153,7 @@ QualitySettings:
     PSM: 5
     PSP2: 5
     Samsung TV: 2
-    Standalone: 2
+    Standalone: 0
     Tizen: 2
     WP8: 5
     Web: 5
