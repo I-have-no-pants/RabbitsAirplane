@@ -10,11 +10,12 @@ public class TurretScript : MonoBehaviour {
 	public BulletScript bullet;
 	public Transform muzzle;
 	public float Velocity;
+	public Rigidbody airplane;
 	
 	public void Fire() {
 		BulletScript b = Instantiate (bullet, muzzle.position, muzzle.rotation) as BulletScript;
 		b.turretCollider = GetComponent<Collider> ();
-		b.GetComponent<Rigidbody> ().velocity = Velocity * muzzle.forward;
+		b.GetComponent<Rigidbody> ().velocity = Velocity * muzzle.forward + airplane.velocity;
 		if(MuzzleFlash)
 			Instantiate (MuzzleFlash, muzzle.position, muzzle.rotation);
 		
